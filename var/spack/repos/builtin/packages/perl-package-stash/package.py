@@ -18,14 +18,14 @@ class PerlPackageStash(PerlPackage):
 
     provides("perl-package-stash-pp")
     depends_on("perl-package-stash-xs@0.26:", type="run")
-    depends_on("perl-dist-checkconflicts@0.2:", type="run")
+    depends_on("perl-dist-checkconflicts@0.02:", type="run")
     depends_on("perl-extutils-makemaker", type=("build", "test"))
     depends_on("perl-test-needs", type=("build", "test"))
     depends_on("perl@5.8.1:", type=("build", "run", "test"))
     depends_on("perl-test-fatal", type=("build", "test"))
     depends_on("perl-module-implementation@0.6:", type="run")
     depends_on("perl-scalar-util", type="run")
-    depends_on("perl-cpan-meta-check@0.11:", type=("build", "test"))
+    depends_on("perl-cpan-meta-check@0.011:", type=("build", "test"))
 
     def url_for_version(self, version):
         if self.spec.satisfies("@0.38:"):
